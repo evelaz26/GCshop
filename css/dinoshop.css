@@ -1,0 +1,445 @@
+/*------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/*------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(slick.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
+
+
+/*------------------------------------------------------------------ Basic Styling & Columns----------------------------------------------------------------*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-weight: normal;
+    overflow-x: hidden;
+    background-color: #dbe1f1;
+} 
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+   
+.dino-shop {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+}
+
+.left-column {
+    width: 60%;
+    margin: 40px 60px;
+    /* flex-flow: wrap; */
+    /* display: inline; */
+}
+   
+.right-column {
+    width: 40%;
+    margin-top: 40px;
+}
+
+
+/*--------------------------------------------------------------------- Dino Images ---------------------------------------------------------------------*/
+
+.left-column .showcase-image  {
+    position: relative; 
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.left-column .showcase-image img {
+    border: 2px solid #163f61;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0; 
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+   
+.left-column .showcase-image img.active {
+    opacity: 1;
+}
+
+.left-column .thumbnail-section {
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.left-column .thumbnail-first {
+    padding: 10px;
+}
+
+.left-column .thumbnail-second {
+    padding: 10px;
+}
+
+.left-column .thumbnail-image img {
+    position: absolute; 
+    left: 0px;
+    top: 0px; 
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.2s ease;
+}
+
+.left-column .thumbnail-image img.active {
+    z-index: 10;
+    opacity: 0.5;
+}
+
+.left-column .thumbnail-image img:hover {
+    opacity: 0.75;
+}
+
+.left-column .thumbnail-image img.showcased {
+    opacity: 1;
+}
+
+.left-column .thumbnail-first .thumbnail-image {
+    position: relative;
+    width: 175px; height: 100px;
+    outline: 1px solid #33648b;
+}
+
+.left-column .thumbnail-second .thumbnail-image {
+    position: relative;
+    width: 175px; height: 100px;
+    outline: 1px solid #33648b;
+}
+
+
+/*-------------------------------------------------------------------- Creature Stats ---------------------------------------------------------------------*/
+
+.dino-stats {
+    margin-bottom: 20px;  
+}
+
+.dino-stats .row li {
+    text-align: left;
+    color: #1d588a;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-family: 'Roboto', bold;  
+}
+
+.dino-stats .row li img {
+    width: 40px;
+    padding-bottom: 5px;
+    -webkit-filter: drop-shadow(1px 1px 1px #193044);
+    filter: drop-shadow(1px 1px 1px #193044); 
+}
+
+
+/*--------------------------------------------------------------------- Dino Description ---------------------------------------------------------------------*/
+
+.dino-description {
+    border-bottom: 1px solid #2d7ab9;
+    margin-bottom: 20px;
+}
+.dino-description span {
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #1d588a;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.dino-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #43484D;
+    letter-spacing: -2px;
+}
+.dino-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+}
+
+
+/*--------------------------------------------------------------------- Dino Color ---------------------------------------------------------------------*/
+
+.dino-color h2{
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.dino-color {
+    margin-bottom: 20px;
+}
+
+
+/*--------------------------------------------------------------------- Choose Dino Color ---------------------------------------------------------------------*/
+   
+.color-choose-rgiga, .color-choose-shadow, .color-choose-rex {
+    max-width: 400px;
+}
+
+.color-choose-rgiga div, 
+.color-choose-shadow div, 
+.color-choose-rex div {
+    display: inline-block;
+}
+   
+.color-choose-rgiga input[type="radio"], 
+.color-choose-shadow input[type="radio"], 
+.color-choose-rex input[type="radio"]{
+    display: none;
+}
+   
+.color-choose-rgiga input[type="radio"] + label span, 
+.color-choose-shadow input[type="radio"] + label span, 
+.color-choose-rex input[type="radio"] + label span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+}
+   
+.color-choose-rgiga input[type="radio"] + label span, 
+.color-choose-shadow input[type="radio"] + label span, 
+.color-choose-rex input[type="radio"] + label span{
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+}
+
+.color-choose-rgiga input[type="radio"]:checked + label span, 
+.color-choose-shadow input[type="radio"]:checked + label span, 
+.color-choose-rex input[type="radio"]:checked + label span {
+    border: 2px solid #163f61;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*--------------------------------------------------------------------- R-Giga Colors ---------------------------------------------------------------------*/
+ 
+.color-choose-rgiga input[type="radio"]#ice + label span { background-image: linear-gradient(45deg, #5fa4ea 50%, #00ffff 50%); }
+.color-choose-rgiga input[type="radio"]#fire + label span {  background-image: linear-gradient(45deg, #ff5732 50%, #ffa63b 50%); }
+.color-choose-rgiga input[type="radio"]#lemonlime + label span { background-image: linear-gradient(45deg, #008840 50%, #e5ff00 50%); } 
+.color-choose-rgiga input[type="radio"]#arkade + label span { background-image: linear-gradient(45deg, #ff00ff 50%, #00ffff 50%); }
+
+.color-choose-rgiga input[type="radio"]#chicagobears + label span { background-image: linear-gradient(45deg, #00849c 50%, #bc4e00 50%); }
+.color-choose-rgiga input[type="radio"]#lavender + label span { background-image: linear-gradient(45deg, #bc77be 50%, #ff0099 50%); }
+.color-choose-rgiga input[type="radio"]#sunset + label span { background-image: linear-gradient(45deg, #ff0099 50%, #ffa63b 50%); }
+.color-choose-rgiga input[type="radio"]#mint + label span { background-image: linear-gradient(45deg, #00ffff 50%, #38e885 50%); }
+
+.color-choose-rgiga input[type="radio"]#venom + label span { background-image: linear-gradient(45deg, #141414 50%, #ffffff 50%); }
+.color-choose-rgiga input[type="radio"]#raven + label span { background-image: linear-gradient(45deg, #403259 50%, #e4d9ff 50%); }
+.color-choose-rgiga input[type="radio"]#forest + label span { background-image: linear-gradient(45deg, #00542b 50%, #bc4e00 50%); }
+.color-choose-rgiga input[type="radio"]#boygirl + label span { background-image: linear-gradient(45deg, #82a6ff 50%, #ffa8a8 50%); }
+
+.color-choose-rgiga input[type="radio"]#bumblebee + label span { background-image: linear-gradient(45deg, #525a55 50%, #ffff00 50%); }
+.color-choose-rgiga input[type="radio"]#pinklemonade + label span { background-image: linear-gradient(45deg, #b60042 50%, #ffff00 50%); }
+.color-choose-rgiga input[type="radio"]#christmas + label span { background-image: linear-gradient(45deg, #a82e00 50%, #38e885 50%); }
+.color-choose-rgiga input[type="radio"]#cherrywhite + label span { background-image: linear-gradient(45deg, #93321c 50%, #ededed 50%); }
+
+
+/*--------------------------------------------------------------------- Shadow Colors ---------------------------------------------------------------------*/
+ 
+.color-choose-shadow input[type="radio"]#ice + label span { background-image: linear-gradient(45deg, #5fa4ea 50%, #00ffff 50%); }
+.color-choose-shadow input[type="radio"]#fire + label span {  background-image: linear-gradient(45deg, #ff5732 50%, #ffa63b 50%); }
+.color-choose-shadow input[type="radio"]#lemonlime + label span { background-image: linear-gradient(45deg, #008840 50%, #e5ff00 50%); } 
+.color-choose-shadow input[type="radio"]#arkade + label span { background-image: linear-gradient(45deg, #ff0099 50%, #00ffff 50%); }
+
+.color-choose-shadow input[type="radio"]#chicagobears + label span { background-image: linear-gradient(45deg, #00849c 50%, #bc4e00 50%); }
+.color-choose-shadow input[type="radio"]#cherryblossom + label span { background-image: linear-gradient(45deg, #ffffff 50%, #ff00ff 50%); }
+.color-choose-shadow input[type="radio"]#blackfyre + label span { background-image: linear-gradient(45deg, #141414 50%, #ee2e00 50%); }
+.color-choose-shadow input[type="radio"]#mint + label span { background-image: linear-gradient(45deg, #00c5aa 50%, #38e885 50%); }
+
+
+/*--------------------------------------------------------------------- Rex Colors ---------------------------------------------------------------------*/
+ 
+.color-choose-rex input[type="radio"]#ice + label span { background-image: linear-gradient(45deg, #5fa4ea 50%, #00ffff 50%); }
+.color-choose-rex input[type="radio"]#fire + label span {  background-image: linear-gradient(45deg, #ff5732 50%, #ffa63b 50%); }
+.color-choose-rex input[type="radio"]#lemonlime + label span { background-image: linear-gradient(45deg, #008840 50%, #e5ff00 50%); } 
+.color-choose-rex input[type="radio"]#arkade + label span { background-image: linear-gradient(45deg, #ff00ff 50%, #00ffff 50%); }
+
+.color-choose-rex input[type="radio"]#chicagobears + label span { background-image: linear-gradient(45deg, #00849c 50%, #bc4e00 50%); }
+.color-choose-rex input[type="radio"]#sunset + label span { background-image: linear-gradient(45deg, #ff0099 50%, #ffa63b 50%); }
+.color-choose-rex input[type="radio"]#mint + label span { background-image: linear-gradient(45deg, #38e885 50%, #00c5aa 50%); }
+.color-choose-rex input[type="radio"]#glacier + label span { background-image: linear-gradient(45deg, #00849c 50%, #ffffff 50%); }
+
+.color-choose-rex input[type="radio"]#raven + label span { background-image: linear-gradient(45deg, #3b3b3b 50%, #853587 50%); }
+.color-choose-rex input[type="radio"]#forest + label span { background-image: linear-gradient(45deg, #87522e 50%, #00542b 50%); }
+.color-choose-rex input[type="radio"]#boygirl + label span { background-image: linear-gradient(45deg, #ff756b 50%, #6281a7 50%); }
+.color-choose-rex input[type="radio"]#skeleton + label span { background-image: linear-gradient(45deg, #141414 50%, #ffffff 50%); }
+
+.color-choose-rex input[type="radio"]#fox + label span { background-image: linear-gradient(45deg, #ff7f00 50%, #ffffff 50%); }
+.color-choose-rex input[type="radio"]#grass + label span { background-image: linear-gradient(45deg, #00542b 50%, #dfffdf 50%); }
+.color-choose-rex input[type="radio"]#whiteblood + label span { background-image: linear-gradient(45deg, #ffffff 50%, #a82e00 50%); }
+.color-choose-rex input[type="radio"]#blackblood + label span { background-image: linear-gradient(45deg, #141414 50%, #a82e00 50%); }
+
+/*---------  Tek Rex ---------*/
+.color-choose-rex input[type="radio"]#tek-ice + label span { background-image: linear-gradient(45deg, #5fa4ea 50%, #abe9ff 50%); }
+.color-choose-rex input[type="radio"]#tek-lemonlime + label span { background-image: linear-gradient(45deg, #008840 50%, #e5ff00 50%); } 
+.color-choose-rex input[type="radio"]#tek-arkade + label span { background-image: linear-gradient(45deg, #ff00ff 50%, #00ffff 50%); }
+.color-choose-rex input[type="radio"]#tek-chicagobears + label span { background-image: linear-gradient(45deg, #00849c 50%, #bc4e00 50%); }
+.color-choose-rex input[type="radio"]#ironman + label span { background-image: linear-gradient(45deg, #ad7000 50%, #a82e00 50%); }
+
+.color-choose-rex input[type="radio"]#whiteblack + label span { background-image: linear-gradient(45deg, #3b3b3b 50%, #ffffff 50%); }
+.color-choose-rex input[type="radio"]#redblack + label span { background-image: linear-gradient(45deg, #3b3b3b 50%, #ff0000 50%); }
+.color-choose-rex input[type="radio"]#blueblack + label span { background-image: linear-gradient(45deg, #3b3b3b 50%, #0000ff 50%); }
+.color-choose-rex input[type="radio"]#greenblack + label span { background-image: linear-gradient(45deg, #3b3b3b 50%, #00ff00 50%); }
+.color-choose-rex input[type="radio"]#yellowblack + label span { background-image: linear-gradient(45deg, #3b3b3b 50%, #ffff00 50%); }
+.color-choose-rex input[type="radio"]#cyanblack + label span { background-image: linear-gradient(45deg, #3b3b3b 50%, #00ffff 50%); }
+.color-choose-rex input[type="radio"]#magentablack + label span { background-image: linear-gradient(45deg, #3b3b3b 50%, #ff00ff 50%); }
+
+
+/*--------------------------------------------------------------------- Color Regions ---------------------------------------------------------------------*/
+
+.color-regions {
+    position: relative;
+    height: 35px;
+}
+.color-regions img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.color-regions img.active {
+    opacity: 1;
+}
+
+.color-section {
+    margin-bottom: 20px;
+}
+
+.color-section span {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.color-section p {
+    font-size: 15px;
+    font-weight: 200;
+    font-style: italic;
+    color: #000000;
+}
+
+
+/*--------------------------------------------------------------------- Saddle Section ---------------------------------------------------------------------*/
+
+.saddle {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.saddle .saddle-info{
+    text-align: left;
+}
+
+.saddle img {
+    width: 85px;
+    max-height: 80px;
+    padding-bottom: 5px;
+    -webkit-filter: drop-shadow(0px 0px 12px #00f7ffab);
+    filter: drop-shadow(0px 0px 12pxx #00f7ffab); 
+}
+
+.saddle h2 {
+    font-size: 33px;
+    font-weight: 300;
+}
+
+.saddle span {
+    font-weight: 300;
+}
+
+
+/*--------------------------------------------------------------------- Dino Price ---------------------------------------------------------------------*/
+
+.dino-price-section {
+    margin: 0px 10px 20px 10px;
+}
+
+.dino-price {
+    display: flex;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #205e91;
+    box-shadow: 0 6px 12px 0 #143a5a;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+   
+.price-card {
+    position: relative;
+    width: 30%;
+    border-radius: 15px;
+    background: #dbe1f1;
+    box-shadow: 0 2px 4px 0 #0f1933;
+    padding: 6px 12px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.price-card .price-coin{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.dino-price h2 {
+    margin-top: 3px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #194a72;
+}
+
+.dino-price span {
+    font-size: 30px;
+    font-weight: 400;
+    color: #163f61;
+}
+
+.dino-price h3 {
+    padding: 10px 0px 0px 6px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #205e91;
+}
